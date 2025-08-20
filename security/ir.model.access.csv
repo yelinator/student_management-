@@ -6,3 +6,5 @@ access_student_course_registration,access_student_course_registration,model_stud
 access_student_course_registration_wizard,access_student_course_registration_wizard,model_student_course_registration_wizard,base.group_user,1,1,1,1
 access_student_invoice,access_student_invoice,model_student_invoice,base.group_user,1,1,1,1
 access_student_payment,access_student_payment,model_student_payment,base.group_user,1,1,1,1
+access_exam_exam,access_exam_exam,model_exam_exam,base.group_user,1,1,1,1
+access_student_grade,access_student_grade,model_student_grade,base.group_user,1,1,1,1

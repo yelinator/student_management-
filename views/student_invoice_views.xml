@@ -58,6 +58,6 @@
         </record>
 
         <!-- Student Invoice Menu -->
-        <menuitem id="student_invoice_menu" name="Invoices" parent="menu_student_root" action="student_invoice_action" sequence="30"/>
+        <menuitem id="student_invoice_menu" name="Invoices" parent="menu_student_configuration" action="student_invoice_action" sequence="30"/>
     </data>
 </odoo>

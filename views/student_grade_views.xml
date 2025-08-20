@@ -1,0 +1,51 @@
+<odoo>
+    <data>
+        <!-- Student Grade Form View -->
+        <record id="student_grade_form_view" model="ir.ui.view">
+            <field name="name">student.grade.form</field>
+            <field name="model">student.grade</field>
+            <field name="arch" type="xml">
+                <form string="Student Grade">
+                    <sheet>
+                        <group>
+                            <field name="student_id"/>
+                            <field name="exam_id"/>
+                            <field name="score"/>
+                            <field name="grade"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Student Grade Tree View -->
+        <record id="student_grade_tree_view" model="ir.ui.view">
+            <field name="name">student.grade.tree</field>
+            <field name="model">student.grade</field>
+            <field name="arch" type="xml">
+                <list string="Student Grades">
+                    <field name="name"/>
+                    <field name="student_id"/>
+                    <field name="exam_id"/>
+                    <field name="score"/>
+                    <field name="grade"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Student Grade Action -->
+        <record id="action_student_grade" model="ir.actions.act_window">
+            <field name="name">Student Grades</field>
+            <field name="res_model">student.grade</field>
+            <field name="view_mode">list,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new student grade.
+                </p>
+            </field>
+        </record>
+
+        <!-- Student Grade Menu -->
+        <menuitem id="menu_student_grade" name="Grades" parent="menu_student_configuration" action="action_student_grade" sequence="20"/>
+    </data>
+</odoo>

@@ -5,3 +5,5 @@ from . import student_invoice
 from . import student_payment
 from . import account_move_inherit
 from . import course_inherit
+from . import exam
+from . import student_grade

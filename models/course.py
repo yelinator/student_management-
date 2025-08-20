@@ -10,3 +10,4 @@ class Course(models.Model):
     credits = fields.Float(string='Credits')
     teacher_id = fields.Many2one('teacher.teacher', string='Teacher')
     student_ids = fields.Many2many('student.student', string='Students')
+    exam_ids = fields.One2many('exam.exam', 'course_id', string='Exams')

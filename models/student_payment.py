@@ -16,7 +16,6 @@ class StudentPayment(models.Model):
         ('card', 'Credit/Debit Card'),
     ], string='Payment Method', default='cash')
 
-    @api.model
     def create(self, vals):
         payment = super(StudentPayment, self).create(vals)
         if payment.invoice_id:

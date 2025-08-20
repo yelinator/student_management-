@@ -9,6 +9,7 @@
     'depends': ['base', 'board', 'account'],
     'data': [
         'security/ir.model.access.csv',
+        'views/student_views.xml',
         'data/student_invoice_sequence.xml',
         'data/student_payment_sequence.xml',
         'views/student_invoice_views.xml',
@@ -16,11 +17,12 @@
         'views/account_move_inherit_views.xml',
         'views/course_inherit_views.xml',
         'views/course_registration_wizard_views.xml',
-        'views/student_views.xml',
         'views/course_views.xml',
         'views/teacher_views.xml',
         'report/student_report.xml',
         'views/student_dashboard.xml',
+        'views/exam_views.xml',
+        'views/student_grade_views.xml',
     ],
     'demo': [
         'demo/demo.xml',

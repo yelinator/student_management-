@@ -24,6 +24,7 @@ class Student(models.Model):
     registration_ids = fields.One2many(
         "student.course.registration", "student_id", string="Registrations"
     )
+    grade_ids = fields.One2many('student.grade', 'student_id', string='Grades')
     state = fields.Selection(
         [
             ("new", "New"),

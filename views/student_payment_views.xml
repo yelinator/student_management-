@@ -53,6 +53,6 @@
         </record>
 
         <!-- Student Payment Menu -->
-        <menuitem id="student_payment_menu" name="Payments" parent="menu_student_root" action="student_payment_action" sequence="40"/>
+        <menuitem id="student_payment_menu" name="Payments" parent="menu_student_configuration" action="student_payment_action" sequence="40"/>
     </data>
 </odoo>
