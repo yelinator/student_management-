@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+        <record id="course_form_view_inherit" model="ir.ui.view">
+            <field name="name">course.course.form.inherit</field>
+            <field name="model">course.course</field>
+            <field name="inherit_id" ref="student_management.view_course_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='credits']" position="after">
+                    <field name="fee"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

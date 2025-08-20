@@ -1,0 +1,27 @@
+<odoo>
+    <data>
+        <record id="view_course_registration_wizard_form" model="ir.ui.view">
+            <field name="name">course.registration.wizard.form</field>
+            <field name="model">student.course.registration.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Course Registration">
+                    <group>
+                        <field name="student_id"/>
+                        <field name="course_ids" widget="many2many_tags"/>
+                    </group>
+                    <footer>
+                        <button name="action_register_courses" string="Register" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_course_registration_wizard" model="ir.actions.act_window">
+            <field name="name">Course Registration</field>
+            <field name="res_model">student.course.registration.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

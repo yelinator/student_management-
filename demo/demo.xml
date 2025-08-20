@@ -1,0 +1,615 @@
+<odoo>
+    <data noupdate="1">
+        
+        <record id="teacher_1" model="teacher.teacher">
+            <field name="name">Teacher 1</field>
+            <field name="email">teacher.1@example.com</field>
+            <field name="phone">123-456-7801</field>
+        </record>
+        <record id="teacher_2" model="teacher.teacher">
+            <field name="name">Teacher 2</field>
+            <field name="email">teacher.2@example.com</field>
+            <field name="phone">123-456-7802</field>
+        </record>
+        <record id="teacher_3" model="teacher.teacher">
+            <field name="name">Teacher 3</field>
+            <field name="email">teacher.3@example.com</field>
+            <field name="phone">123-456-7803</field>
+        </record>
+        <record id="teacher_4" model="teacher.teacher">
+            <field name="name">Teacher 4</field>
+            <field name="email">teacher.4@example.com</field>
+            <field name="phone">123-456-7804</field>
+        </record>
+        <record id="teacher_5" model="teacher.teacher">
+            <field name="name">Teacher 5</field>
+            <field name="email">teacher.5@example.com</field>
+            <field name="phone">123-456-7805</field>
+        </record>
+        <record id="teacher_6" model="teacher.teacher">
+            <field name="name">Teacher 6</field>
+            <field name="email">teacher.6@example.com</field>
+            <field name="phone">123-456-7806</field>
+        </record>
+        <record id="teacher_7" model="teacher.teacher">
+            <field name="name">Teacher 7</field>
+            <field name="email">teacher.7@example.com</field>
+            <field name="phone">123-456-7807</field>
+        </record>
+        <record id="teacher_8" model="teacher.teacher">
+            <field name="name">Teacher 8</field>
+            <field name="email">teacher.8@example.com</field>
+            <field name="phone">123-456-7808</field>
+        </record>
+        <record id="teacher_9" model="teacher.teacher">
+            <field name="name">Teacher 9</field>
+            <field name="email">teacher.9@example.com</field>
+            <field name="phone">123-456-7809</field>
+        </record>
+        <record id="teacher_10" model="teacher.teacher">
+            <field name="name">Teacher 10</field>
+            <field name="email">teacher.10@example.com</field>
+            <field name="phone">123-456-7810</field>
+        </record>
+        <record id="course_1" model="course.course">
+            <field name="name">Course 1</field>
+            <field name="code">C001</field>
+            <field name="credits">2.75</field>
+            <field name="teacher_id" ref="teacher_8"/>
+        </record>
+        <record id="course_2" model="course.course">
+            <field name="name">Course 2</field>
+            <field name="code">C002</field>
+            <field name="credits">4.32</field>
+            <field name="teacher_id" ref="teacher_9"/>
+        </record>
+        <record id="course_3" model="course.course">
+            <field name="name">Course 3</field>
+            <field name="code">C003</field>
+            <field name="credits">1.96</field>
+            <field name="teacher_id" ref="teacher_1"/>
+        </record>
+        <record id="course_4" model="course.course">
+            <field name="name">Course 4</field>
+            <field name="code">C004</field>
+            <field name="credits">4.95</field>
+            <field name="teacher_id" ref="teacher_7"/>
+        </record>
+        <record id="course_5" model="course.course">
+            <field name="name">Course 5</field>
+            <field name="code">C005</field>
+            <field name="credits">2.23</field>
+            <field name="teacher_id" ref="teacher_1"/>
+        </record>
+        <record id="course_6" model="course.course">
+            <field name="name">Course 6</field>
+            <field name="code">C006</field>
+            <field name="credits">4.24</field>
+            <field name="teacher_id" ref="teacher_7"/>
+        </record>
+        <record id="course_7" model="course.course">
+            <field name="name">Course 7</field>
+            <field name="code">C007</field>
+            <field name="credits">3.50</field>
+            <field name="teacher_id" ref="teacher_10"/>
+        </record>
+        <record id="course_8" model="course.course">
+            <field name="name">Course 8</field>
+            <field name="code">C008</field>
+            <field name="credits">1.88</field>
+            <field name="teacher_id" ref="teacher_1"/>
+        </record>
+        <record id="course_9" model="course.course">
+            <field name="name">Course 9</field>
+            <field name="code">C009</field>
+            <field name="credits">2.81</field>
+            <field name="teacher_id" ref="teacher_2"/>
+        </record>
+        <record id="course_10" model="course.course">
+            <field name="name">Course 10</field>
+            <field name="code">C010</field>
+            <field name="credits">2.14</field>
+            <field name="teacher_id" ref="teacher_5"/>
+        </record>
+        <record id="student_1" model="student.student">
+            <field name="name">Student 1</field>
+            <field name="student_id">S0001</field>
+            <field name="date_of_birth">2001-09-02</field>
+            <field name="gender">other</field>
+            <field name="email">student.1@example.com</field>
+            <field name="phone">555-555-0001</field>
+            <field name="address">Address for student 1</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_9'), ref('course_5'), ref('course_2')])]" />
+        </record>
+        <record id="student_2" model="student.student">
+            <field name="name">Student 2</field>
+            <field name="student_id">S0002</field>
+            <field name="date_of_birth">2001-01-26</field>
+            <field name="gender">male</field>
+            <field name="email">student.2@example.com</field>
+            <field name="phone">555-555-0002</field>
+            <field name="address">Address for student 2</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_4')])]" />
+        </record>
+        <record id="student_3" model="student.student">
+            <field name="name">Student 3</field>
+            <field name="student_id">S0003</field>
+            <field name="date_of_birth">2000-06-21</field>
+            <field name="gender">other</field>
+            <field name="email">student.3@example.com</field>
+            <field name="phone">555-555-0003</field>
+            <field name="address">Address for student 3</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4')])]" />
+        </record>
+        <record id="student_4" model="student.student">
+            <field name="name">Student 4</field>
+            <field name="student_id">S0004</field>
+            <field name="date_of_birth">2005-01-11</field>
+            <field name="gender">other</field>
+            <field name="email">student.4@example.com</field>
+            <field name="phone">555-555-0004</field>
+            <field name="address">Address for student 4</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_7'), ref('course_2'), ref('course_9')])]" />
+        </record>
+        <record id="student_5" model="student.student">
+            <field name="name">Student 5</field>
+            <field name="student_id">S0005</field>
+            <field name="date_of_birth">2001-03-13</field>
+            <field name="gender">male</field>
+            <field name="email">student.5@example.com</field>
+            <field name="phone">555-555-0005</field>
+            <field name="address">Address for student 5</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_7'), ref('course_4')])]" />
+        </record>
+        <record id="student_6" model="student.student">
+            <field name="name">Student 6</field>
+            <field name="student_id">S0006</field>
+            <field name="date_of_birth">2001-03-03</field>
+            <field name="gender">other</field>
+            <field name="email">student.6@example.com</field>
+            <field name="phone">555-555-0006</field>
+            <field name="address">Address for student 6</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_6'), ref('course_1'), ref('course_8')])]" />
+        </record>
+        <record id="student_7" model="student.student">
+            <field name="name">Student 7</field>
+            <field name="student_id">S0007</field>
+            <field name="date_of_birth">2003-08-23</field>
+            <field name="gender">other</field>
+            <field name="email">student.7@example.com</field>
+            <field name="phone">555-555-0007</field>
+            <field name="address">Address for student 7</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_3'), ref('course_7'), ref('course_9'), ref('course_5')])]" />
+        </record>
+        <record id="student_8" model="student.student">
+            <field name="name">Student 8</field>
+            <field name="student_id">S0008</field>
+            <field name="date_of_birth">2005-07-18</field>
+            <field name="gender">female</field>
+            <field name="email">student.8@example.com</field>
+            <field name="phone">555-555-0008</field>
+            <field name="address">Address for student 8</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_1'), ref('course_4'), ref('course_8'), ref('course_3')])]" />
+        </record>
+        <record id="student_9" model="student.student">
+            <field name="name">Student 9</field>
+            <field name="student_id">S0009</field>
+            <field name="date_of_birth">2001-07-01</field>
+            <field name="gender">other</field>
+            <field name="email">student.9@example.com</field>
+            <field name="phone">555-555-0009</field>
+            <field name="address">Address for student 9</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4')])]" />
+        </record>
+        <record id="student_10" model="student.student">
+            <field name="name">Student 10</field>
+            <field name="student_id">S0010</field>
+            <field name="date_of_birth">2001-09-18</field>
+            <field name="gender">other</field>
+            <field name="email">student.10@example.com</field>
+            <field name="phone">555-555-0010</field>
+            <field name="address">Address for student 10</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_2'), ref('course_7')])]" />
+        </record>
+        <record id="student_11" model="student.student">
+            <field name="name">Student 11</field>
+            <field name="student_id">S0011</field>
+            <field name="date_of_birth">2004-07-03</field>
+            <field name="gender">female</field>
+            <field name="email">student.11@example.com</field>
+            <field name="phone">555-555-0011</field>
+            <field name="address">Address for student 11</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+        <record id="student_12" model="student.student">
+            <field name="name">Student 12</field>
+            <field name="student_id">S0012</field>
+            <field name="date_of_birth">2000-04-19</field>
+            <field name="gender">other</field>
+            <field name="email">student.12@example.com</field>
+            <field name="phone">555-555-0012</field>
+            <field name="address">Address for student 12</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+        <record id="student_13" model="student.student">
+            <field name="name">Student 13</field>
+            <field name="student_id">S0013</field>
+            <field name="date_of_birth">2001-08-18</field>
+            <field name="gender">male</field>
+            <field name="email">student.13@example.com</field>
+            <field name="phone">555-555-0013</field>
+            <field name="address">Address for student 13</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+        <record id="student_14" model="student.student">
+            <field name="name">Student 14</field>
+            <field name="student_id">S0014</field>
+            <field name="date_of_birth">2002-01-13</field>
+            <field name="gender">other</field>
+            <field name="email">student.14@example.com</field>
+            <field name="phone">555-555-0014</field>
+            <field name="address">Address for student 14</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+        <record id="student_15" model="student.student">
+            <field name="name">Student 15</field>
+            <field name="student_id">S0015</field>
+            <field name="date_of_birth">2003-03-04</field>
+            <field name="gender">male</field>
+            <field name="email">student.15@example.com</field>
+            <field name="phone">555-555-0015</field>
+            <field name="address">Address for student 15</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+        <record id="student_16" model="student.student">
+            <field name="name">Student 16</field>
+            <field name="student_id">S0016</field>
+            <field name="date_of_birth">2004-02-15</field>
+            <field name="gender">female</field>
+            <field name="email">student.16@example.com</field>
+            <field name="phone">555-555-0016</field>
+            <field name="address">Address for student 16</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+        <record id="student_17" model="student.student">
+            <field name="name">Student 17</field>
+            <field name="student_id">S0017</field>
+            <field name="date_of_birth">2005-01-10</field>
+            <field name="gender">male</field>
+            <field name="email">student.17@example.com</field>
+            <field name="phone">555-555-0017</field>
+            <field name="address">Address for student 17</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+        <record id="student_18" model="student.student">
+            <field name="name">Student 18</field>
+            <field name="student_id">S0018</field>
+            <field name="date_of_birth">2000-11-23</field>
+            <field name="gender">female</field>
+            <field name="email">student.18@example.com</field>
+            <field name="phone">555-555-0018</field>
+            <field name="address">Address for student 18</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+        <record id="student_19" model="student.student">
+            <field name="name">Student 19</field>
+            <field name="student_id">S0019</field>
+            <field name="date_of_birth">2001-06-28</field>
+            <field name="gender">male</field>
+            <field name="email">student.19@example.com</field>
+            <field name="phone">555-555-0019</field>
+            <field name="address">Address for student 19</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+        <record id="student_20" model="student.student">
+            <field name="name">Student 20</field>
+            <field name="student_id">S0020</field>
+            <field name="date_of_birth">2002-05-12</field>
+            <field name="gender">female</field>
+            <field name="email">student.20@example.com</field>
+            <field name="phone">555-555-0020</field>
+            <field name="address">Address for student 20</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+        <record id="student_21" model="student.student">
+            <field name="name">Student 21</field>
+            <field name="student_id">S0021</field>
+            <field name="date_of_birth">2003-04-17</field>
+            <field name="gender">male</field>
+            <field name="email">student.21@example.com</field>
+            <field name="phone">555-555-0021</field>
+            <field name="address">Address for student 21</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+        <record id="student_22" model="student.student">
+            <field name="name">Student 22</field>
+            <field name="student_id">S0022</field>
+            <field name="date_of_birth">2004-03-22</field>
+            <field name="gender">female</field>
+            <field name="email">student.22@example.com</field>
+            <field name="phone">555-555-0022</field>
+            <field name="address">Address for student 22</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+        <record id="student_23" model="student.student">
+            <field name="name">Student 23</field>
+            <field name="student_id">S0023</field>
+            <field name="date_of_birth">2005-02-27</field>
+            <field name="gender">male</field>
+            <field name="email">student.23@example.com</field>
+            <field name="phone">555-555-0023</field>
+            <field name="address">Address for student 23</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+        <record id="student_24" model="student.student">
+            <field name="name">Student 24</field>
+            <field name="student_id">S0024</field>
+            <field name="date_of_birth">2000-01-01</field>
+            <field name="gender">female</field>
+            <field name="email">student.24@example.com</field>
+            <field name="phone">555-555-0024</field>
+            <field name="address">Address for student 24</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+        <record id="student_25" model="student.student">
+            <field name="name">Student 25</field>
+            <field name="student_id">S0025</field>
+            <field name="date_of_birth">2001-12-06</field>
+            <field name="gender">male</field>
+            <field name="email">student.25@example.com</field>
+            <field name="phone">555-555-0025</field>
+            <field name="address">Address for student 25</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+        <record id="student_26" model="student.student">
+            <field name="name">Student 26</field>
+            <field name="student_id">S0026</field>
+            <field name="date_of_birth">2002-11-11</field>
+            <field name="gender">female</field>
+            <field name="email">student.26@example.com</field>
+            <field name="phone">555-555-0026</field>
+            <field name="address">Address for student 26</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+        <record id="student_27" model="student.student">
+            <field name="name">Student 27</field>
+            <field name="student_id">S0027</field>
+            <field name="date_of_birth">2003-10-16</field>
+            <field name="gender">male</field>
+            <field name="email">student.27@example.com</field>
+            <field name="phone">555-555-0027</field>
+            <field name="address">Address for student 27</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+        <record id="student_28" model="student.student">
+            <field name="name">Student 28</field>
+            <field name="student_id">S0028</field>
+            <field name="date_of_birth">2004-09-21</field>
+            <field name="gender">female</field>
+            <field name="email">student.28@example.com</field>
+            <field name="phone">555-555-0028</field>
+            <field name="address">Address for student 28</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+        <record id="student_29" model="student.student">
+            <field name="name">Student 29</field>
+            <field name="student_id">S0029</field>
+            <field name="date_of_birth">2005-08-26</field>
+            <field name="gender">male</field>
+            <field name="email">student.29@example.com</field>
+            <field name="phone">555-555-0029</field>
+            <field name="address">Address for student 29</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+        <record id="student_30" model="student.student">
+            <field name="name">Student 30</field>
+            <field name="student_id">S0030</field>
+            <field name="date_of_birth">2000-07-31</field>
+            <field name="gender">female</field>
+            <field name="email">student.30@example.com</field>
+            <field name="phone">555-555-0030</field>
+            <field name="address">Address for student 30</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+        <record id="student_31" model="student.student">
+            <field name="name">Student 31</field>
+            <field name="student_id">S0031</field>
+            <field name="date_of_birth">2001-06-05</field>
+            <field name="gender">male</field>
+            <field name="email">student.31@example.com</field>
+            <field name="phone">555-555-0031</field>
+            <field name="address">Address for student 31</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+        <record id="student_32" model="student.student">
+            <field name="name">Student 32</field>
+            <field name="student_id">S0032</field>
+            <field name="date_of_birth">2002-05-10</field>
+            <field name="gender">female</field>
+            <field name="email">student.32@example.com</field>
+            <field name="phone">555-555-0032</field>
+            <field name="address">Address for student 32</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+        <record id="student_33" model="student.student">
+            <field name="name">Student 33</field>
+            <field name="student_id">S0033</field>
+            <field name="date_of_birth">2003-04-15</field>
+            <field name="gender">male</field>
+            <field name="email">student.33@example.com</field>
+            <field name="phone">555-555-0033</field>
+            <field name="address">Address for student 33</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+        <record id="student_34" model="student.student">
+            <field name="name">Student 34</field>
+            <field name="student_id">S0034</field>
+            <field name="date_of_birth">2004-03-20</field>
+            <field name="gender">female</field>
+            <field name="email">student.34@example.com</field>
+            <field name="phone">555-555-0034</field>
+            <field name="address">Address for student 34</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+        <record id="student_35" model="student.student">
+            <field name="name">Student 35</field>
+            <field name="student_id">S0035</field>
+            <field name="date_of_birth">2005-02-25</field>
+            <field name="gender">male</field>
+            <field name="email">student.35@example.com</field>
+            <field name="phone">555-555-0035</field>
+            <field name="address">Address for student 35</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+        <record id="student_36" model="student.student">
+            <field name="name">Student 36</field>
+            <field name="student_id">S0036</field>
+            <field name="date_of_birth">2000-01-30</field>
+            <field name="gender">female</field>
+            <field name="email">student.36@example.com</field>
+            <field name="phone">555-555-0036</field>
+            <field name="address">Address for student 36</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+        <record id="student_37" model="student.student">
+            <field name="name">Student 37</field>
+            <field name="student_id">S0037</field>
+            <field name="date_of_birth">2001-12-04</field>
+            <field name="gender">male</field>
+            <field name="email">student.37@example.com</field>
+            <field name="phone">555-555-0037</field>
+            <field name="address">Address for student 37</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+        <record id="student_38" model="student.student">
+            <field name="name">Student 38</field>
+            <field name="student_id">S0038</field>
+            <field name="date_of_birth">2002-11-09</field>
+            <field name="gender">female</field>
+            <field name="email">student.38@example.com</field>
+            <field name="phone">555-555-0038</field>
+            <field name="address">Address for student 38</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+        <record id="student_39" model="student.student">
+            <field name="name">Student 39</field>
+            <field name="student_id">S0039</field>
+            <field name="date_of_birth">2003-10-14</field>
+            <field name="gender">male</field>
+            <field name="email">student.39@example.com</field>
+            <field name="phone">555-555-0039</field>
+            <field name="address">Address for student 39</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+        <record id="student_40" model="student.student">
+            <field name="name">Student 40</field>
+            <field name="student_id">S0040</field>
+            <field name="date_of_birth">2004-09-19</field>
+            <field name="gender">female</field>
+            <field name="email">student.40@example.com</field>
+            <field name="phone">555-555-0040</field>
+            <field name="address">Address for student 40</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+        <record id="student_41" model="student.student">
+            <field name="name">Student 41</field>
+            <field name="student_id">S0041</field>
+            <field name="date_of_birth">2005-08-24</field>
+            <field name="gender">male</field>
+            <field name="email">student.41@example.com</field>
+            <field name="phone">555-555-0041</field>
+            <field name="address">Address for student 41</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+        <record id="student_42" model="student.student">
+            <field name="name">Student 42</field>
+            <field name="student_id">S0042</field>
+            <field name="date_of_birth">2000-07-29</field>
+            <field name="gender">female</field>
+            <field name="email">student.42@example.com</field>
+            <field name="phone">555-555-0042</field>
+            <field name="address">Address for student 42</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+        <record id="student_43" model="student.student">
+            <field name="name">Student 43</field>
+            <field name="student_id">S0043</field>
+            <field name="date_of_birth">2001-06-03</field>
+            <field name="gender">male</field>
+            <field name="email">student.43@example.com</field>
+            <field name="phone">555-555-0043</field>
+            <field name="address">Address for student 43</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+        <record id="student_44" model="student.student">
+            <field name="name">Student 44</field>
+            <field name="student_id">S0044</field>
+            <field name="date_of_birth">2002-05-08</field>
+            <field name="gender">female</field>
+            <field name="email">student.44@example.com</field>
+            <field name="phone">555-555-0044</field>
+            <field name="address">Address for student 44</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+        <record id="student_45" model="student.student">
+            <field name="name">Student 45</field>
+            <field name="student_id">S0045</field>
+            <field name="date_of_birth">2003-04-13</field>
+            <field name="gender">male</field>
+            <field name="email">student.45@example.com</field>
+            <field name="phone">555-555-0045</field>
+            <field name="address">Address for student 45</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+        <record id="student_46" model="student.student">
+            <field name="name">Student 46</field>
+            <field name="student_id">S0046</field>
+            <field name="date_of_birth">2004-03-18</field>
+            <field name="gender">female</field>
+            <field name="email">student.46@example.com</field>
+            <field name="phone">555-555-0046</field>
+            <field name="address">Address for student 46</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+        <record id="student_47" model="student.student">
+            <field name="name">Student 47</field>
+            <field name="student_id">S0047</field>
+            <field name="date_of_birth">2005-02-23</field>
+            <field name="gender">male</field>
+            <field name="email">student.47@example.com</field>
+            <field name="phone">555-555-0047</field>
+            <field name="address">Address for student 47</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+        <record id="student_48" model="student.student">
+            <field name="name">Student 48</field>
+            <field name="student_id">S0048</field>
+            <field name="date_of_birth">2000-01-28</field>
+            <field name="gender">female</field>
+            <field name="email">student.48@example.com</field>
+            <field name="phone">555-555-0048</field>
+            <field name="address">Address for student 48</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+        <record id="student_49" model="student.student">
+            <field name="name">Student 49</field>
+            <field name="student_id">S0049</field>
+            <field name="date_of_birth">2001-12-02</field>
+            <field name="gender">male</field>
+            <field name="email">student.49@example.com</field>
+            <field name="phone">555-555-0049</field>
+            <field name="address">Address for student 49</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+        <record id="student_50" model="student.student">
+            <field name="name">Student 50</field>
+            <field name="student_id">S0050</field>
+            <field name="date_of_birth">2002-11-07</field>
+            <field name="gender">female</field>
+            <field name="email">student.50@example.com</field>
+            <field name="phone">555-555-0050</field>
+            <field name="address">Address for student 50</field>
+            <field name="course_ids" eval="[(6, 0, [ref('course_10'), ref('course_1'), ref('course_4'), ref('course_8')])]" />
+        </record>
+    </data>
+</odoo>

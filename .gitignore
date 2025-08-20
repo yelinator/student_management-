@@ -1,0 +1,23 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Logs
+*.log
+
+# Temp files
+*.tmp
+*.temp
+
+# Odoo specific
+.lock
+.env
+
+# Editor specific
+.idea/
+.vscode/
+*.swp
+*~
+

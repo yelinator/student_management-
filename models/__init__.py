@@ -1,0 +1,7 @@
+from . import student
+from . import course
+from . import teacher
+from . import student_invoice
+from . import student_payment
+from . import account_move_inherit
+from . import course_inherit
